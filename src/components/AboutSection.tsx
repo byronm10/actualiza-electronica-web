@@ -1,13 +1,12 @@
-
 import { motion } from 'framer-motion';
-import { Chip, Award, Clock, ShieldCheck } from 'lucide-react';
+import { Cpu, Award, Clock, ShieldCheck } from 'lucide-react';
 
 export default function AboutSection() {
   const values = [
     {
       title: "Innovación Tecnológica",
       description: "Nos mantenemos a la vanguardia con las últimas tecnologías del sector.",
-      icon: <Chip className="h-6 w-6" />
+      icon: <Cpu className="h-6 w-6" />
     },
     {
       title: "Excelencia Técnica",
