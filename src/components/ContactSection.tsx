@@ -49,7 +49,7 @@ export default function ContactSection() {
     {
       icon: <Mail className="h-6 w-6" />,
       title: "Email",
-      details: "info@actualidadelectronica.com",
+      details: "gerencia@actualidadelectronica.com.co",
       description: "Respondemos en 24 horas"
     },
     {
@@ -99,11 +99,11 @@ export default function ContactSection() {
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">Sábado</span>
-                  <span className="font-medium">10:00 - 14:00</span>
+                  <span className="font-medium">9:00 - 14:00</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">Domingo</span>
-                  <span className="font-medium">Cerrado</span>
+                  <span className="font-medium text-brand-600">Favor contactarse</span>
                 </div>
               </div>
             </div>
