@@ -1,13 +1,16 @@
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Phone, Mail, MapPin, Send } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
+import emailjs from '@emailjs/browser';
 
 export default function ContactSection() {
   const { toast } = useToast();
+  const form = useRef<HTMLFormElement>(null);
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -22,21 +25,43 @@ export default function ContactSection() {
   
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
     
-    // Muestra un toast de confirmación
-    toast({
-      title: "Formulario enviado",
-      description: "Gracias por contactarnos, nos comunicaremos contigo pronto.",
-    });
+    if (!form.current) return;
     
-    // Resetea el formulario
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      message: ''
-    });
+    setLoading(true);
+    
+    // Asegúrate de reemplazar estos valores con los tuyos de EmailJS
+    // IDs tomados de la configuración de tu cuenta de EmailJS
+    const serviceId = 'service_id'; // Reemplazar con tu Service ID
+    const templateId = 'template_id'; // Reemplazar con tu Template ID
+    const publicKey = 'public_key'; // Reemplazar con tu Public Key
+    
+    emailjs.sendForm(serviceId, templateId, form.current, publicKey)
+      .then(() => {
+        console.log('Email enviado con éxito!');
+        toast({
+          title: "Mensaje enviado",
+          description: "Gracias por contactarnos, nos comunicaremos contigo pronto.",
+        });
+        
+        // Resetea el formulario
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          message: ''
+        });
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error('Error al enviar el email:', error);
+        toast({
+          title: "Error al enviar",
+          description: "Ha ocurrido un error al enviar tu mensaje. Por favor, intenta de nuevo más tarde.",
+          variant: "destructive",
+        });
+        setLoading(false);
+      });
   };
   
   const contactInfo = [
@@ -110,7 +135,7 @@ export default function ContactSection() {
           </div>
           
           <div className="lg:col-span-3">
-            <form onSubmit={handleSubmit} className="p-6 md:p-8 bg-white rounded-2xl shadow-sm border border-border">
+            <form ref={form} onSubmit={handleSubmit} className="p-6 md:p-8 bg-white rounded-2xl shadow-sm border border-border">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm font-medium">
@@ -177,9 +202,13 @@ export default function ContactSection() {
                 </div>
               </div>
               
-              <Button type="submit" className="w-full bg-brand-600 hover:bg-brand-700 button-shadow">
-                Enviar Mensaje
-                <Send className="ml-2 h-4 w-4" />
+              <Button 
+                type="submit" 
+                className="w-full bg-brand-600 hover:bg-brand-700 button-shadow"
+                disabled={loading}
+              >
+                {loading ? 'Enviando...' : 'Enviar Mensaje'}
+                {!loading && <Send className="ml-2 h-4 w-4" />}
               </Button>
             </form>
           </div>
