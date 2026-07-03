@@ -34,7 +34,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div className="lg:col-span-2 max-w-md">
             <a href="#inicio" aria-label="Actualidad Electrónica" className="inline-flex">
-              <Logo height={64} />
+              <Logo height={80} />
             </a>
             <p className="mt-5 text-sm leading-relaxed">
               Laboratorio de reparación de módulos electrónicos e integrador de sistemas de flota para el

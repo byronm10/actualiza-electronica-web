@@ -37,7 +37,7 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-4 md:px-6 lg:px-8 flex items-center justify-between">
         <a href="#inicio" className="flex items-center gap-2 group">
-          <Logo height={60} />
+          <Logo height={76} />
         </a>
 
         <nav className="hidden lg:flex items-center gap-7">
