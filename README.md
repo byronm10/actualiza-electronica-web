@@ -62,8 +62,8 @@ This project is built with .
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/e3920d97-e643-4d1d-80b0-cb0b69aced21) and click on Share -> Publish.
+This site is deployed as a static Vite build to AWS S3 behind CloudFront.
 
-## I want to use a custom domain - is that possible?
+Deploys are handled by the manual GitHub Actions workflow in `.github/workflows/deploy-aws.yml`. The workflow builds the app, syncs `dist/` to the `actualidadelectronica.com.co` S3 bucket, and invalidates the CloudFront distribution.
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+See `docs/deployment.md` for the AWS resources, local verification commands, and deployment notes.

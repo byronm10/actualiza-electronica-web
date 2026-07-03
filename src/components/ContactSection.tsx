@@ -68,20 +68,20 @@ export default function ContactSection() {
     {
       icon: <Phone className="h-6 w-6" />,
       title: "Teléfono",
-      details: "+34 123 456 789",
-      description: "Lunes a Viernes, 9am-6pm"
+      details: "+57 320 527 2330",
+      description: "Lunes a Viernes, 8am-6pm"
     },
     {
       icon: <Mail className="h-6 w-6" />,
       title: "Email",
-      details: "gerencia@actualidadelectronica.com.co",
+      details: "contabilidad@actualidadelectronica.com.co",
       description: "Respondemos en 24 horas"
     },
     {
       icon: <MapPin className="h-6 w-6" />,
       title: "Ubicación",
-      details: "Calle Ejemplo 123, Ciudad",
-      description: "Código Postal 28000"
+      details: "Cr15 54-186, Soledad",
+      description: "Atlántico, Colombia 08001"
     }
   ];
   
@@ -120,7 +120,7 @@ export default function ContactSection() {
               <div className="space-y-2">
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">Lunes - Viernes</span>
-                  <span className="font-medium">9:00 - 18:00</span>
+                  <span className="font-medium">8:00 - 18:00</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">Sábado</span>

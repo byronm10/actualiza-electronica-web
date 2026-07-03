@@ -55,8 +55,7 @@ const Index = () => {
   
   // Función para abrir WhatsApp
   const openWhatsApp = () => {
-    // Reemplaza este número con el número real de WhatsApp (incluye el código de país)
-    const phoneNumber = "+34123456789";
+    const phoneNumber = "573205272330";
     const whatsappUrl = `https://wa.me/${phoneNumber}`;
     window.open(whatsappUrl, '_blank');
   };

@@ -50,10 +50,10 @@ export default function Footer() {
               software y electrónica para todo tipo de vehículos.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="p-2 rounded-full bg-brand-800 hover:bg-brand-700 transition-colors">
+              <a href="https://www.facebook.com/actualidadelectronica" className="p-2 rounded-full bg-brand-800 hover:bg-brand-700 transition-colors">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="p-2 rounded-full bg-brand-800 hover:bg-brand-700 transition-colors">
+              <a href="https://www.instagram.com/actualidadelectronica" className="p-2 rounded-full bg-brand-800 hover:bg-brand-700 transition-colors">
                 <Instagram size={20} />
               </a>
               <a href="#" className="p-2 rounded-full bg-brand-800 hover:bg-brand-700 transition-colors">
