@@ -1,5 +1,6 @@
 
-import { Facebook, Instagram, MapPin, Phone, Mail, Zap } from 'lucide-react';
+import { Facebook, Instagram, MapPin, Phone, Mail } from 'lucide-react';
+import Logo from './Logo';
 
 const columns = [
   {
@@ -28,33 +29,26 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative border-t border-white/5 bg-carbon-950/80 text-white/70 mt-10">
-      <div className="absolute inset-x-0 top-0 h-px divider-glow" />
-
+    <footer className="relative border-t border-paper-200 bg-paper-50 text-paper-700 mt-10">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div className="lg:col-span-2 max-w-md">
-            <a href="#inicio" className="flex items-center gap-2">
-              <span className="relative flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-electric-400 to-plasma-500 shadow-[0_0_24px_-4px_hsl(191_100%_48%/0.7)]">
-                <Zap className="h-5 w-5 text-carbon-950" strokeWidth={2.5} />
-              </span>
-              <span className="text-xl font-bold text-white">
-                Actualidad<span className="gradient-text-cyan">Electrónica</span>
-              </span>
+            <a href="#inicio" aria-label="Actualidad Electrónica" className="inline-flex">
+              <Logo height={44} />
             </a>
-            <p className="mt-4 text-sm leading-relaxed">
+            <p className="mt-5 text-sm leading-relaxed">
               Laboratorio de reparación de módulos electrónicos e integrador de sistemas de flota para el
               transporte pesado en Colombia. Ingeniería propia, banco de pruebas y garantía real.
             </p>
             <div className="mt-6 space-y-2 text-sm">
-              <a href="tel:+573205272330" className="flex items-center gap-2 hover:text-white transition-colors">
-                <Phone className="h-4 w-4 text-electric-300" /> +57 320 527 2330
+              <a href="tel:+573205272330" className="flex items-center gap-2 hover:text-paper-900 transition-colors">
+                <Phone className="h-4 w-4 text-ocean-600" /> +57 320 527 2330
               </a>
-              <a href="mailto:contabilidad@actualidadelectronica.com.co" className="flex items-center gap-2 hover:text-white transition-colors">
-                <Mail className="h-4 w-4 text-electric-300" /> contabilidad@actualidadelectronica.com.co
+              <a href="mailto:contabilidad@actualidadelectronica.com.co" className="flex items-center gap-2 hover:text-paper-900 transition-colors">
+                <Mail className="h-4 w-4 text-ocean-600" /> contabilidad@actualidadelectronica.com.co
               </a>
               <div className="flex items-start gap-2">
-                <MapPin className="mt-0.5 h-4 w-4 text-electric-300 shrink-0" />
+                <MapPin className="mt-0.5 h-4 w-4 text-ocean-600 shrink-0" />
                 <span>Cr15 54-186, Soledad · Atlántico, Colombia 08001</span>
               </div>
             </div>
@@ -64,7 +58,7 @@ export default function Footer() {
                 href="https://www.facebook.com/actualidadelectronica"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/[0.03] hover:border-electric-400/40 hover:bg-electric-500/10 hover:text-electric-200 transition-colors"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-paper-200 bg-white hover:border-ocean-300 hover:bg-ocean-50 hover:text-ocean-700 transition-colors"
               >
                 <Facebook size={18} />
               </a>
@@ -73,7 +67,7 @@ export default function Footer() {
                 href="https://www.instagram.com/actualidadelectronica"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/[0.03] hover:border-electric-400/40 hover:bg-electric-500/10 hover:text-electric-200 transition-colors"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-paper-200 bg-white hover:border-coral-300 hover:bg-coral-50 hover:text-coral-700 transition-colors"
               >
                 <Instagram size={18} />
               </a>
@@ -82,7 +76,7 @@ export default function Footer() {
                 href="https://wa.me/573205272330"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex h-10 items-center justify-center rounded-lg border border-white/10 bg-white/[0.03] px-4 text-xs font-semibold hover:border-electric-400/40 hover:bg-electric-500/10 hover:text-electric-200 transition-colors"
+                className="inline-flex h-10 items-center justify-center rounded-full border border-paper-200 bg-white px-4 text-xs font-semibold hover:border-emerald-300 hover:bg-emerald-50 hover:text-emerald-700 transition-colors"
               >
                 WhatsApp
               </a>
@@ -91,13 +85,13 @@ export default function Footer() {
 
           {columns.map(col => (
             <div key={col.title}>
-              <h3 className="text-sm font-semibold text-white uppercase tracking-widest">
+              <h3 className="text-sm font-semibold text-paper-900 uppercase tracking-widest">
                 {col.title}
               </h3>
               <ul className="mt-4 space-y-2">
                 {col.links.map(link => (
                   <li key={link.name}>
-                    <a href={link.href} className="text-sm hover:text-white transition-colors">
+                    <a href={link.href} className="text-sm hover:text-ocean-700 transition-colors">
                       {link.name}
                     </a>
                   </li>
@@ -107,7 +101,7 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="mt-12 pt-6 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-white/50">
+        <div className="mt-12 pt-6 border-t border-paper-200 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-paper-500">
           <p>© {currentYear} Actualidad Electrónica S.A.S. Todos los derechos reservados.</p>
           <p className="font-mono">Ingeniería electrónica · Transporte · Colombia</p>
         </div>

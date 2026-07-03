@@ -43,18 +43,18 @@ export default function TestimonialsSection() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="glass-card glass-card-hover rounded-2xl p-6 flex flex-col"
             >
-              <Quote className="h-8 w-8 text-electric-400/60" />
-              <div className="mt-2 flex gap-1 text-signal-400">
+              <Quote className="h-8 w-8 text-ocean-400/70" />
+              <div className="mt-2 flex gap-1 text-coral-400">
                 {Array.from({ length: 5 }).map((_, k) => (
-                  <Star key={k} className="h-4 w-4 fill-signal-400" />
+                  <Star key={k} className="h-4 w-4 fill-coral-400" />
                 ))}
               </div>
-              <blockquote className="mt-4 text-white/80 text-sm leading-relaxed flex-1">
+              <blockquote className="mt-4 text-paper-700 text-sm leading-relaxed flex-1">
                 “{t.text}”
               </blockquote>
-              <figcaption className="mt-6 border-t border-white/10 pt-4">
-                <div className="text-sm font-semibold text-white">{t.name}</div>
-                <div className="text-xs text-white/55">{t.role} · {t.company}</div>
+              <figcaption className="mt-6 border-t border-paper-200 pt-4">
+                <div className="text-sm font-semibold text-paper-900">{t.name}</div>
+                <div className="text-xs text-paper-500">{t.role} · {t.company}</div>
               </figcaption>
             </motion.figure>
           ))}

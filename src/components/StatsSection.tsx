@@ -62,14 +62,14 @@ export default function StatsSection() {
               transition={{ duration: 0.5, delay: i * 0.08 }}
               className="stat-card group"
             >
-              <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-electric-500/10 text-electric-300 ring-1 ring-electric-400/20">
+              <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-ocean-50 text-ocean-600 ring-1 ring-ocean-100">
                 {s.icon}
               </div>
               <div className="stat-number">
                 <AnimatedNumber value={s.value} suffix={s.suffix} />
               </div>
-              <div className="mt-2 text-sm font-semibold text-white">{s.label}</div>
-              <div className="text-xs text-white/55">{s.sub}</div>
+              <div className="mt-2 text-sm font-semibold text-paper-900">{s.label}</div>
+              <div className="text-xs text-paper-500">{s.sub}</div>
             </motion.div>
           ))}
         </motion.div>

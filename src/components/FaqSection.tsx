@@ -46,7 +46,7 @@ export default function FaqSection() {
             <h2 className="section-heading">
               Lo que suelen preguntarnos las <span className="gradient-text-cyan">flotas</span>
             </h2>
-            <p className="mt-4 text-white/70">
+            <p className="mt-4 text-paper-600">
               ¿No encuentras tu respuesta? Escríbenos por WhatsApp o llena el formulario y te
               respondemos en menos de 24 horas.
             </p>
@@ -58,12 +58,12 @@ export default function FaqSection() {
                 <AccordionItem
                   key={i}
                   value={`item-${i}`}
-                  className="glass-card rounded-2xl px-5 border !border-white/10"
+                  className="glass-card rounded-2xl px-5"
                 >
-                  <AccordionTrigger className="text-left text-white hover:no-underline hover:text-electric-300">
+                  <AccordionTrigger className="text-left text-paper-900 hover:no-underline hover:text-ocean-700">
                     {f.q}
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/70 leading-relaxed">
+                  <AccordionContent className="text-paper-600 leading-relaxed">
                     {f.a}
                   </AccordionContent>
                 </AccordionItem>

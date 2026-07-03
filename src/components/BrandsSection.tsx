@@ -17,7 +17,7 @@ export default function BrandsSection() {
           <h2 className="section-heading">
             Cubrimos las principales marcas del <span className="gradient-text-cyan">transporte pesado</span>
           </h2>
-          <p className="mt-4 text-white/70">
+          <p className="mt-4 text-paper-600">
             Trabajamos con buses interurbanos, urbanos, escolares, camiones tractocamiones, volquetas y flotas
             comerciales.
           </p>
@@ -37,16 +37,16 @@ export default function BrandsSection() {
               className="glass-card rounded-2xl p-6"
             >
               <div className="flex items-center gap-3">
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-electric-500/20 to-plasma-500/20 text-electric-300 ring-1 ring-white/10">
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-ocean-100 to-coral-100 text-ocean-700 ring-1 ring-ocean-100">
                   {group.icon}
                 </span>
-                <h3 className="text-lg font-semibold text-white">{group.title}</h3>
+                <h3 className="text-lg font-semibold text-paper-900">{group.title}</h3>
               </div>
               <div className="mt-5 flex flex-wrap gap-2">
                 {group.list.map(b => (
                   <span
                     key={b}
-                    className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1.5 text-sm text-white/85 hover:border-electric-400/40 hover:bg-electric-500/10 transition-colors"
+                    className="rounded-full border border-paper-200 bg-white px-3 py-1.5 text-sm text-paper-700 hover:border-ocean-300 hover:bg-ocean-50 hover:text-ocean-700 transition-colors"
                   >
                     {b}
                   </span>

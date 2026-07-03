@@ -20,7 +20,7 @@ export default function ClientsSection() {
           <h2 className="section-heading">
             Empresas que <span className="gradient-text-cyan">mueven a Colombia</span>
           </h2>
-          <p className="mt-4 text-white/70">
+          <p className="mt-4 text-paper-600">
             Trabajamos con operadores de transporte intermunicipal y urbano reconocidos a nivel nacional.
           </p>
         </div>
@@ -31,7 +31,7 @@ export default function ClientsSection() {
           {track.map((l, i) => (
             <div
               key={`${l.src}-${i}`}
-              className="flex h-24 w-40 md:w-48 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] px-6 backdrop-blur"
+              className="flex h-24 w-40 md:w-48 shrink-0 items-center justify-center rounded-2xl border border-paper-200 bg-white px-6 shadow-sm"
             >
               <img
                 src={l.src}

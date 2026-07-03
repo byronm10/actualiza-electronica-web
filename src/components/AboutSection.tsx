@@ -40,13 +40,13 @@ export default function AboutSection() {
               Un laboratorio electrónico dedicado al{' '}
               <span className="gradient-text-cyan">transporte pesado</span>
             </h2>
-            <p className="mt-5 text-white/70 text-lg leading-relaxed">
-              Somos <strong className="text-white">Actualidad Electrónica</strong>, una empresa colombiana con
+            <p className="mt-5 text-paper-700 text-lg leading-relaxed">
+              Somos <strong className="text-paper-900">Actualidad Electrónica</strong>, una empresa colombiana con
               más de dos décadas resolviendo la electrónica que otros talleres declaran irreparable.
               Trabajamos con operadores de transporte intermunicipal, urbano, escolar y de carga en todo el país.
             </p>
-            <p className="mt-4 text-white/70 leading-relaxed">
-              Nuestro diferencial es simple: <span className="text-white">diagnosticamos con datos, reparamos a nivel de componente y respondemos con velocidad</span>.
+            <p className="mt-4 text-paper-700 leading-relaxed">
+              Nuestro diferencial es simple: <span className="text-paper-900">diagnosticamos con datos, reparamos a nivel de componente y respondemos con velocidad</span>.
               Contamos con banco de pruebas, programadores originales y un equipo que combina ingeniería,
               experiencia de campo y logística nacional.
             </p>
@@ -76,11 +76,11 @@ export default function AboutSection() {
                   transition={{ duration: 0.4, delay: i * 0.08 }}
                   className="glass-card rounded-xl p-4"
                 >
-                  <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-electric-500/10 text-electric-300 ring-1 ring-electric-400/20">
+                  <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-ocean-50 text-ocean-600 ring-1 ring-ocean-100">
                     {v.icon}
                   </div>
-                  <div className="text-sm font-semibold text-white">{v.title}</div>
-                  <p className="mt-1 text-xs text-white/60 leading-relaxed">{v.description}</p>
+                  <div className="text-sm font-semibold text-paper-900">{v.title}</div>
+                  <p className="mt-1 text-xs text-paper-600 leading-relaxed">{v.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -93,14 +93,14 @@ export default function AboutSection() {
             transition={{ duration: 0.6 }}
             className="relative aspect-square"
           >
-            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-electric-500/15 via-plasma-500/10 to-signal-500/10 blur-2xl" />
-            <div className="absolute top-[8%] left-[8%] right-[8%] bottom-[8%] rounded-3xl overflow-hidden border border-white/10 shadow-2xl z-10">
+            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-ocean-200/50 via-coral-100/40 to-sun-100/40 blur-2xl" />
+            <div className="absolute top-[8%] left-[8%] right-[8%] bottom-[8%] rounded-3xl overflow-hidden border border-paper-200 shadow-2xl z-10 bg-white">
               <img src="/device.jpeg" alt="Reparación de módulos electrónicos" className="object-cover w-full h-full" />
             </div>
-            <div className="absolute top-0 left-0 w-[55%] h-[55%] rounded-2xl overflow-hidden border border-white/10 shadow-xl z-20 rotate-[-3deg]">
+            <div className="absolute top-0 left-0 w-[55%] h-[55%] rounded-2xl overflow-hidden border border-paper-200 shadow-xl z-20 rotate-[-3deg] bg-white">
               <img src="/scheme.jpeg" alt="Esquemas y diagnóstico" className="object-cover w-full h-full" />
             </div>
-            <div className="absolute bottom-0 right-0 w-[50%] h-[45%] rounded-2xl overflow-hidden border border-white/10 shadow-xl z-20 rotate-[4deg]">
+            <div className="absolute bottom-0 right-0 w-[50%] h-[45%] rounded-2xl overflow-hidden border border-paper-200 shadow-xl z-20 rotate-[4deg] bg-white">
               <img src="/tv.jpeg" alt="Sistemas de entretenimiento" className="object-cover w-full h-full" />
             </div>
           </motion.div>

@@ -93,9 +93,9 @@ const services: Service[] = [
 ];
 
 const accentBg: Record<string, string> = {
-  electric: 'from-electric-500/25 to-electric-500/5 text-electric-300',
-  plasma: 'from-plasma-500/25 to-plasma-500/5 text-plasma-300',
-  signal: 'from-signal-500/25 to-signal-500/5 text-signal-300',
+  electric: 'from-ocean-100 to-ocean-50 text-ocean-700',
+  plasma: 'from-coral-100 to-coral-50 text-coral-700',
+  signal: 'from-sun-100 to-sun-50 text-sun-700',
 };
 
 export default function ServicesSection() {
@@ -110,7 +110,7 @@ export default function ServicesSection() {
             Un portafolio <span className="gradient-text-cyan">electrónico completo</span> para
             operadores de transporte
           </h2>
-          <p className="mt-5 text-white/70 text-lg leading-relaxed">
+          <p className="mt-5 text-paper-700 text-lg leading-relaxed">
             Desde el módulo electrónico más crítico del vehículo hasta la experiencia del pasajero: diseñamos,
             instalamos y mantenemos todos los sistemas eléctricos y digitales de tu flota.
           </p>
@@ -127,12 +127,12 @@ export default function ServicesSection() {
               className={`service-card ${service.size === 'lg' ? 'md:col-span-2' : ''}`}
             >
               <div
-                className={`mb-4 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-gradient-to-br ${accentBg[service.accent ?? 'electric']} ring-1 ring-white/10`}
+                className={`mb-4 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-gradient-to-br ${accentBg[service.accent ?? 'electric']} ring-1 ring-paper-200`}
               >
                 {service.icon}
               </div>
-              <h3 className="text-lg font-semibold text-white">{service.title}</h3>
-              <p className="mt-2 text-sm text-white/65 leading-relaxed">{service.description}</p>
+              <h3 className="text-lg font-semibold text-paper-900">{service.title}</h3>
+              <p className="mt-2 text-sm text-paper-600 leading-relaxed">{service.description}</p>
             </motion.div>
           ))}
         </div>

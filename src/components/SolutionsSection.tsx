@@ -67,7 +67,7 @@ export default function SolutionsSection() {
           <h2 className="section-heading">
             Tecnología que <span className="gradient-text-cyan">transforma la operación</span>
           </h2>
-          <p className="mt-4 text-white/70 text-lg">
+          <p className="mt-4 text-paper-700 text-lg">
             Combinamos hardware propio y plataformas de gestión para que puedas monitorear, proteger y
             diagnosticar tu flota desde cualquier lugar.
           </p>
@@ -81,23 +81,23 @@ export default function SolutionsSection() {
               className={cn(
                 'group relative flex items-start gap-3 rounded-xl border p-4 text-left transition-all flex-1',
                 active === s.id
-                  ? 'border-electric-400/50 bg-gradient-to-br from-electric-500/10 to-plasma-500/10 shadow-[0_20px_60px_-30px_hsl(191_100%_48%/0.6)]'
-                  : 'border-white/10 bg-white/[0.03] hover:border-white/20 hover:bg-white/[0.05]',
+                  ? 'border-ocean-300 bg-gradient-to-br from-ocean-50 to-coral-50 shadow-[0_20px_50px_-25px_hsl(220_72%_52%/0.35)]'
+                  : 'border-paper-200 bg-white hover:border-ocean-200 hover:bg-paper-50',
               )}
             >
               <span
                 className={cn(
-                  'inline-flex h-10 w-10 items-center justify-center rounded-lg ring-1 ring-white/10 shrink-0',
+                  'inline-flex h-10 w-10 items-center justify-center rounded-lg ring-1 ring-paper-200 shrink-0',
                   active === s.id
-                    ? 'bg-electric-400 text-carbon-950'
-                    : 'bg-white/[0.05] text-electric-300',
+                    ? 'bg-ocean-600 text-white'
+                    : 'bg-paper-100 text-ocean-600',
                 )}
               >
                 {s.icon}
               </span>
               <div>
-                <div className="text-sm font-semibold text-white">{s.title}</div>
-                <div className="text-xs text-white/55">{s.tagline}</div>
+                <div className="text-sm font-semibold text-paper-900">{s.title}</div>
+                <div className="text-xs text-paper-500">{s.tagline}</div>
               </div>
             </button>
           ))}
@@ -114,23 +114,23 @@ export default function SolutionsSection() {
           >
             <div className="grid grid-cols-1 md:grid-cols-2">
               <div className="p-8 md:p-10 flex flex-col justify-center">
-                <div className="flex items-center gap-2 text-electric-300 text-xs font-semibold uppercase tracking-widest">
+                <div className="flex items-center gap-2 text-ocean-700 text-xs font-semibold uppercase tracking-widest">
                   <Zap className="h-4 w-4" /> Solución integrada
                 </div>
-                <h3 className="mt-3 text-2xl md:text-3xl font-bold text-white">{current.title}</h3>
-                <p className="mt-3 text-white/70">{current.description}</p>
+                <h3 className="mt-3 text-2xl md:text-3xl font-semibold text-paper-900">{current.title}</h3>
+                <p className="mt-3 text-paper-700">{current.description}</p>
                 <ul className="mt-6 space-y-3">
                   {current.features.map((f, k) => (
                     <li key={k} className="flex items-start gap-3">
-                      <CheckCircle2 className="mt-0.5 h-5 w-5 text-electric-400 shrink-0" />
-                      <span className="text-white/80">{f}</span>
+                      <CheckCircle2 className="mt-0.5 h-5 w-5 text-ocean-600 shrink-0" />
+                      <span className="text-paper-800">{f}</span>
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="relative min-h-[280px] md:min-h-[420px] hidden md:block">
                 <img src={current.image} alt={current.title} className="absolute inset-0 h-full w-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-r from-carbon-900 via-carbon-900/40 to-transparent md:from-carbon-900/95 md:via-carbon-900/50" />
+                <div className="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent md:from-white md:via-white/50" />
               </div>
             </div>
           </motion.div>
