@@ -1,96 +1,109 @@
 import { motion } from 'framer-motion';
-import { Cpu, Award, Clock, ShieldCheck } from 'lucide-react';
+import { Cpu, Award, Clock, ShieldCheck, MapPin, GraduationCap } from 'lucide-react';
+
+const values = [
+  {
+    title: 'Ingeniería propia',
+    description: 'Diseñamos, reparamos y programamos electrónica. No revendemos: entendemos el circuito.',
+    icon: <Cpu className="h-6 w-6" />,
+  },
+  {
+    title: 'Equipo certificado',
+    description: 'Ingenieros electrónicos con formación continua en Bosch, Continental y protocolos automotrices.',
+    icon: <GraduationCap className="h-6 w-6" />,
+  },
+  {
+    title: 'Respuesta rápida',
+    description: 'Diagnóstico en 24 horas y logística nacional para reducir el tiempo fuera de servicio.',
+    icon: <Clock className="h-6 w-6" />,
+  },
+  {
+    title: 'Trabajo garantizado',
+    description: '6 meses de garantía escrita sobre cada intervención. Trazabilidad completa.',
+    icon: <ShieldCheck className="h-6 w-6" />,
+  },
+];
 
 export default function AboutSection() {
-  const values = [
-    {
-      title: "Innovación Tecnológica",
-      description: "Nos mantenemos a la vanguardia con las últimas tecnologías del sector.",
-      icon: <Cpu className="h-6 w-6" />
-    },
-    {
-      title: "Excelencia Técnica",
-      description: "Nuestro equipo cuenta con certificaciones y amplia experiencia en el sector.",
-      icon: <Award className="h-6 w-6" />
-    },
-    {
-      title: "Servicio Rápido",
-      description: "Entendemos la importancia del tiempo en su negocio y respondemos con agilidad.",
-      icon: <Clock className="h-6 w-6" />
-    },
-    {
-      title: "Confiabilidad",
-      description: "Ofrecemos soluciones robustas y duraderas para sus necesidades tecnológicas.",
-      icon: <ShieldCheck className="h-6 w-6" />
-    }
-  ];
-
   return (
-    <section id="nosotros" className="py-20 bg-secondary">
+    <section id="nosotros" className="relative py-24">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row md:items-center gap-12">
-          <div className="md:w-1/2 animate-fade-in-left">
-            <div className="inline-block px-3 py-1 rounded-full bg-brand-100 text-brand-700 text-sm font-medium mb-4">
-              Sobre Nosotros
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Expertos en Electrónica para el Sector Transporte
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <span className="section-eyebrow">Nosotros</span>
+            <h2 className="section-heading">
+              Un laboratorio electrónico dedicado al{' '}
+              <span className="gradient-text-cyan">transporte pesado</span>
             </h2>
-            <p className="text-muted-foreground text-lg mb-6">
-              En Actualidad Electrónica nos especializamos en proporcionar soluciones tecnológicas 
-              avanzadas para el sector transporte, combinando innovación y experiencia técnica.
+            <p className="mt-5 text-white/70 text-lg leading-relaxed">
+              Somos <strong className="text-white">Actualidad Electrónica</strong>, una empresa colombiana con
+              más de dos décadas resolviendo la electrónica que otros talleres declaran irreparable.
+              Trabajamos con operadores de transporte intermunicipal, urbano, escolar y de carga en todo el país.
             </p>
-            <p className="text-muted-foreground text-lg mb-8">
-              Nuestro equipo de profesionales altamente cualificados está comprometido 
-              con ofrecer el mejor servicio, garantizando la satisfacción de nuestros clientes 
-              y contribuyendo a la modernización del transporte.
+            <p className="mt-4 text-white/70 leading-relaxed">
+              Nuestro diferencial es simple: <span className="text-white">diagnosticamos con datos, reparamos a nivel de componente y respondemos con velocidad</span>.
+              Contamos con banco de pruebas, programadores originales y un equipo que combina ingeniería,
+              experiencia de campo y logística nacional.
             </p>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {values.map((value, index) => (
-                <div 
-                  key={index} 
-                  className="flex items-start space-x-4 p-4 rounded-lg bg-white/70 border border-border"
+
+            <div className="mt-8 flex flex-wrap gap-2">
+              <span className="chip">
+                <MapPin className="h-3.5 w-3.5" />
+                Soledad, Atlántico
+              </span>
+              <span className="chip">
+                <Award className="h-3.5 w-3.5" />
+                20+ años de operación
+              </span>
+              <span className="chip">
+                <ShieldCheck className="h-3.5 w-3.5" />
+                Cobertura nacional
+              </span>
+            </div>
+
+            <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {values.map((v, i) => (
+                <motion.div
+                  key={v.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: i * 0.08 }}
+                  className="glass-card rounded-xl p-4"
                 >
-                  <div className="mt-1 flex-shrink-0 p-2 rounded-md bg-brand-100 text-brand-700">
-                    {value.icon}
+                  <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-electric-500/10 text-electric-300 ring-1 ring-electric-400/20">
+                    {v.icon}
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-1">{value.title}</h3>
-                    <p className="text-sm text-muted-foreground">{value.description}</p>
-                  </div>
-                </div>
+                  <div className="text-sm font-semibold text-white">{v.title}</div>
+                  <p className="mt-1 text-xs text-white/60 leading-relaxed">{v.description}</p>
+                </motion.div>
               ))}
             </div>
-          </div>
-          
-          <div className="md:w-1/2 animate-fade-in-right">
-            <div className="relative aspect-square">
-              <div className="absolute top-[10%] left-[10%] right-[10%] bottom-[10%] rounded-2xl overflow-hidden border-8 border-white shadow-xl z-10">
-                <img 
-                  src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
-                  alt="Nuestro equipo" 
-                  className="object-cover w-full h-full"
-                />
-              </div>
-              
-              <div className="absolute top-0 left-0 w-[60%] h-[60%] rounded-xl overflow-hidden border-8 border-white shadow-lg">
-                <img 
-                  src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
-                  alt="Tecnología de transporte" 
-                  className="object-cover w-full h-full"
-                />
-              </div>
-              
-              <div className="absolute bottom-0 right-0 w-[55%] h-[50%] rounded-xl overflow-hidden border-8 border-white shadow-lg">
-                <img 
-                  src="https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
-                  alt="Electrónica de vehículos" 
-                  className="object-cover w-full h-full"
-                />
-              </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="relative aspect-square"
+          >
+            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-electric-500/15 via-plasma-500/10 to-signal-500/10 blur-2xl" />
+            <div className="absolute top-[8%] left-[8%] right-[8%] bottom-[8%] rounded-3xl overflow-hidden border border-white/10 shadow-2xl z-10">
+              <img src="/device.jpeg" alt="Reparación de módulos electrónicos" className="object-cover w-full h-full" />
             </div>
-          </div>
+            <div className="absolute top-0 left-0 w-[55%] h-[55%] rounded-2xl overflow-hidden border border-white/10 shadow-xl z-20 rotate-[-3deg]">
+              <img src="/scheme.jpeg" alt="Esquemas y diagnóstico" className="object-cover w-full h-full" />
+            </div>
+            <div className="absolute bottom-0 right-0 w-[50%] h-[45%] rounded-2xl overflow-hidden border border-white/10 shadow-xl z-20 rotate-[4deg]">
+              <img src="/tv.jpeg" alt="Sistemas de entretenimiento" className="object-cover w-full h-full" />
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

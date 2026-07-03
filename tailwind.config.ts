@@ -22,6 +22,13 @@ export default {
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
 				display: ['Manrope', 'sans-serif'],
+				mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+			},
+			backgroundImage: {
+				'mesh-hero': "radial-gradient(60rem 40rem at 12% 18%, hsl(191 100% 48% / 0.28), transparent 60%), radial-gradient(50rem 40rem at 88% 30%, hsl(275 92% 60% / 0.28), transparent 60%), radial-gradient(45rem 35rem at 50% 90%, hsl(38 100% 55% / 0.22), transparent 60%), linear-gradient(180deg, #050810 0%, #080B1A 100%)",
+				'mesh-soft': "radial-gradient(40rem 30rem at 20% 10%, hsl(191 100% 48% / 0.14), transparent 60%), radial-gradient(35rem 30rem at 90% 60%, hsl(275 92% 60% / 0.14), transparent 60%), linear-gradient(180deg, #080B1A 0%, #101529 100%)",
+				'circuit-grid': "linear-gradient(hsl(191 100% 48% / 0.06) 1px, transparent 1px), linear-gradient(90deg, hsl(191 100% 48% / 0.06) 1px, transparent 1px)",
+				'noise': "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.06 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>\")",
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -78,6 +85,55 @@ export default {
 					700: "#1A56DB",
 					800: "#1E429F",
 					900: "#233876",
+				},
+				carbon: {
+					50: '#F4F6FB',
+					100: '#E5E9F2',
+					200: '#C3CBDD',
+					300: '#96A2BF',
+					400: '#66739A',
+					500: '#404D75',
+					600: '#2B3457',
+					700: '#1B2138',
+					800: '#101529',
+					900: '#080B1A',
+					950: '#03050F',
+				},
+				electric: {
+					50: '#E4FBFF',
+					100: '#B8F3FF',
+					200: '#8AE9FF',
+					300: '#5CDEFF',
+					400: '#2ED0FA',
+					500: '#0AB6E4',
+					600: '#008DBA',
+					700: '#006890',
+					800: '#004566',
+					900: '#00263D',
+				},
+				signal: {
+					50: '#FFF6E5',
+					100: '#FFE5B0',
+					200: '#FFD37A',
+					300: '#FFC245',
+					400: '#FFB010',
+					500: '#E29200',
+					600: '#B57200',
+					700: '#805100',
+					800: '#513200',
+					900: '#241700',
+				},
+				plasma: {
+					50: '#F4E8FF',
+					100: '#DFC1FF',
+					200: '#C892FF',
+					300: '#B060FF',
+					400: '#9530FF',
+					500: '#7B00F0',
+					600: '#5F00BF',
+					700: '#45008B',
+					800: '#2C0058',
+					900: '#150029',
 				},
 			},
 			borderRadius: {
@@ -149,7 +205,35 @@ export default {
 					'50%': {
 						transform: 'translateY(-10px)'
 					}
-				}
+				},
+				'float-slow': {
+					'0%, 100%': { transform: 'translateY(0) translateX(0)' },
+					'50%': { transform: 'translateY(-24px) translateX(6px)' },
+				},
+				'pulse-glow': {
+					'0%, 100%': { boxShadow: '0 0 0 0 hsl(191 100% 48% / 0.55)' },
+					'50%': { boxShadow: '0 0 0 18px hsl(191 100% 48% / 0)' },
+				},
+				'gradient-x': {
+					'0%, 100%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' },
+				},
+				'marquee': {
+					'0%': { transform: 'translateX(0)' },
+					'100%': { transform: 'translateX(-50%)' },
+				},
+				'shimmer': {
+					'0%': { transform: 'translateX(-120%)' },
+					'100%': { transform: 'translateX(120%)' },
+				},
+				'circuit-dash': {
+					'to': { strokeDashoffset: '-1000' },
+				},
+				'blob': {
+					'0%, 100%': { transform: 'translate(0,0) scale(1)' },
+					'33%': { transform: 'translate(3rem,-2rem) scale(1.08)' },
+					'66%': { transform: 'translate(-2rem,2rem) scale(0.94)' },
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -158,7 +242,14 @@ export default {
 				'fade-in-right': 'fade-in-right 0.5s ease-out',
 				'fade-in-left': 'fade-in-left 0.5s ease-out',
 				'scale-in': 'scale-in 0.3s ease-out',
-				'float': 'float 6s ease-in-out infinite'
+				'float': 'float 6s ease-in-out infinite',
+				'float-slow': 'float-slow 12s ease-in-out infinite',
+				'pulse-glow': 'pulse-glow 2.4s ease-out infinite',
+				'gradient-x': 'gradient-x 8s ease infinite',
+				'marquee': 'marquee 32s linear infinite',
+				'shimmer': 'shimmer 2.8s ease-in-out infinite',
+				'circuit-dash': 'circuit-dash 18s linear infinite',
+				'blob': 'blob 18s ease-in-out infinite',
 			}
 		}
 	},

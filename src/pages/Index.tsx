@@ -1,86 +1,83 @@
 import { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
+import StatsSection from '@/components/StatsSection';
 import ServicesSection from '@/components/ServicesSection';
+import EcuExpertise from '@/components/EcuExpertise';
+import ProcessSection from '@/components/ProcessSection';
 import SolutionsSection from '@/components/SolutionsSection';
+import BrandsSection from '@/components/BrandsSection';
 import AboutSection from '@/components/AboutSection';
+import ClientsSection from '@/components/ClientsSection';
+import TestimonialsSection from '@/components/TestimonialsSection';
+import FaqSection from '@/components/FaqSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 import { MessageCircle } from 'lucide-react';
 
 const Index = () => {
   useEffect(() => {
-    // Función para manejar los efectos de aparición mediante IntersectionObserver
-    const handleScrollAnimation = () => {
-      const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver(
+      entries => {
         entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-          }
+          if (entry.isIntersecting) entry.target.classList.add('is-visible');
         });
-      }, { threshold: 0.1 });
-      
-      const elements = document.querySelectorAll('.fade-in-section');
-      elements.forEach(el => observer.observe(el));
-      
-      return () => {
-        elements.forEach(el => observer.unobserve(el));
-      };
+      },
+      { threshold: 0.1 },
+    );
+
+    const elements = document.querySelectorAll('.fade-in-section');
+    elements.forEach(el => observer.observe(el));
+
+    const smoothClick = (e: Event) => {
+      const anchor = e.currentTarget as HTMLAnchorElement;
+      const targetId = anchor.getAttribute('href');
+      if (!targetId || targetId === '#') return;
+      const el = document.querySelector(targetId);
+      if (el) {
+        e.preventDefault();
+        window.scrollTo({ top: (el as HTMLElement).offsetTop - 80, behavior: 'smooth' });
+      }
     };
-    
-    handleScrollAnimation();
-    
-    // Función para manejar el scroll suave a las secciones
-    const handleSmoothScroll = () => {
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          
-          const targetId = this.getAttribute('href');
-          if (targetId === '#') return;
-          
-          const targetElement = document.querySelector(targetId);
-          if (targetElement) {
-            window.scrollTo({
-              top: targetElement.offsetTop - 80,
-              behavior: 'smooth'
-            });
-          }
-        });
-      });
+    const anchors = document.querySelectorAll('a[href^="#"]');
+    anchors.forEach(a => a.addEventListener('click', smoothClick));
+
+    return () => {
+      elements.forEach(el => observer.unobserve(el));
+      anchors.forEach(a => a.removeEventListener('click', smoothClick));
     };
-    
-    handleSmoothScroll();
   }, []);
-  
-  // Función para abrir WhatsApp
-  const openWhatsApp = () => {
-    const phoneNumber = "573205272330";
-    const whatsappUrl = `https://wa.me/${phoneNumber}`;
-    window.open(whatsappUrl, '_blank');
-  };
-  
+
   return (
-    <>
+    <div className="relative overflow-x-hidden">
       <Navbar />
       <main>
         <Hero />
+        <StatsSection />
         <ServicesSection />
+        <EcuExpertise />
+        <ProcessSection />
         <SolutionsSection />
+        <BrandsSection />
         <AboutSection />
+        <ClientsSection />
+        <TestimonialsSection />
+        <FaqSection />
         <ContactSection />
       </main>
       <Footer />
-      
-      {/* Botón flotante de WhatsApp */}
-      <button
-        onClick={openWhatsApp}
-        className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg transition-all duration-300 hover:scale-110 z-50"
+
+      <a
+        href="https://wa.me/573205272330"
+        target="_blank"
+        rel="noreferrer"
         aria-label="Contactar por WhatsApp"
+        className="fixed bottom-6 right-6 z-50 inline-flex items-center gap-2 rounded-full bg-green-500 pl-5 pr-6 py-4 text-white shadow-[0_20px_50px_-12px_rgba(34,197,94,0.6)] transition-transform hover:scale-105 animate-pulse-glow"
       >
-        <MessageCircle className="h-6 w-6" />
-      </button>
-    </>
+        <MessageCircle className="h-5 w-5" />
+        <span className="hidden sm:inline text-sm font-semibold">Escríbenos</span>
+      </a>
+    </div>
   );
 };
 
