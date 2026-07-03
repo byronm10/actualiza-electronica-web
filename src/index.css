@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800&family=Barlow+Condensed:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -75,13 +75,6 @@
     background: hsl(220 72% 52% / 0.20);
     color: hsl(220 30% 12%);
   }
-
-  .font-serif-italic {
-    font-family: 'Instrument Serif', Georgia, serif;
-    font-style: italic;
-    font-weight: 400;
-    letter-spacing: -0.02em;
-  }
 }
 
 @layer components {
@@ -115,7 +108,7 @@
   }
 
   .gradient-text {
-    @apply font-serif italic;
+    @apply font-display font-semibold;
     background-image: linear-gradient(120deg, #2757C7 0%, #3A6EDF 40%, #EE5A3A 100%);
     background-size: 200% 200%;
     -webkit-background-clip: text;
@@ -125,7 +118,7 @@
   }
 
   .gradient-text-cyan {
-    @apply font-serif italic;
+    @apply font-display font-semibold;
     background-image: linear-gradient(120deg, #1F449E 0%, #3A6EDF 50%, #FF7A59 100%);
     background-size: 200% 200%;
     -webkit-background-clip: text;
@@ -194,7 +187,7 @@
   }
 
   .stat-number {
-    @apply text-4xl md:text-5xl font-semibold text-ocean-700 font-serif italic;
+    @apply text-4xl md:text-5xl font-display font-bold text-ocean-700 tracking-tight;
   }
 
   .link-underline {

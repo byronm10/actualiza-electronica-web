@@ -90,7 +90,7 @@ export default function Hero() {
               </div>
             </div>
             <div className="absolute -bottom-6 -left-6 w-40 rounded-2xl bg-white border border-paper-200 shadow-lg p-4 hidden md:block">
-              <div className="text-2xl font-serif italic text-ocean-700 leading-none">98%</div>
+              <div className="text-3xl font-display font-bold text-ocean-700 leading-none tracking-tight">98%</div>
               <div className="mt-1 text-xs text-paper-600 leading-snug">
                 de las ECUs que recibimos vuelven a funcionar tras la reparación.
               </div>

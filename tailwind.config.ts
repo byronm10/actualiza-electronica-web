@@ -20,9 +20,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-				display: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-				serif: ['"Instrument Serif"', '"Fraunces"', 'ui-serif', 'Georgia', 'serif'],
+				sans: ['"Barlow"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+				display: ['"Barlow Condensed"', '"Barlow"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
 				mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
 			},
 			backgroundImage: {
