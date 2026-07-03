@@ -37,7 +37,7 @@ export default function BrandsSection() {
               className="glass-card rounded-2xl p-6"
             >
               <div className="flex items-center gap-3">
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-ocean-100 to-coral-100 text-ocean-700 ring-1 ring-ocean-100">
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-ocean-100 to-ocean-50 text-ocean-700 ring-1 ring-ocean-100">
                   {group.icon}
                 </span>
                 <h3 className="text-lg font-semibold text-paper-900">{group.title}</h3>

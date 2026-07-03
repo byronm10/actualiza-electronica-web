@@ -64,7 +64,7 @@ export default function Navbar() {
           </a>
           <Button
             asChild
-            className="btn-glow rounded-full bg-gradient-to-r from-ocean-600 to-coral-500 text-white font-semibold hover:from-ocean-500 hover:to-coral-400"
+            className="btn-glow rounded-full bg-gradient-to-r from-ocean-700 to-ocean-500 text-white font-semibold hover:from-ocean-600 hover:to-ocean-400"
           >
             <a href="#contacto">Solicitar diagnóstico</a>
           </Button>
@@ -94,7 +94,7 @@ export default function Navbar() {
             ))}
             <Button
               asChild
-              className="mt-2 rounded-full bg-gradient-to-r from-ocean-600 to-coral-500 text-white font-semibold"
+              className="mt-2 rounded-full bg-gradient-to-r from-ocean-700 to-ocean-500 text-white font-semibold"
             >
               <a href="#contacto" onClick={() => setIsOpen(false)}>Solicitar diagnóstico</a>
             </Button>

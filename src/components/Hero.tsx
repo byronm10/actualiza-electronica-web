@@ -9,7 +9,7 @@ export default function Hero() {
       {/* Fondos suaves */}
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -top-40 -left-32 h-[36rem] w-[36rem] rounded-full bg-ocean-200/50 blur-3xl" />
-        <div className="absolute top-1/3 -right-40 h-[32rem] w-[32rem] rounded-full bg-coral-200/45 blur-3xl" />
+        <div className="absolute top-1/3 -right-40 h-[32rem] w-[32rem] rounded-full bg-ocean-100/60 blur-3xl" />
         <div className="absolute inset-0 hex-grid opacity-70" />
       </div>
 
@@ -39,7 +39,7 @@ export default function Hero() {
               <Button
                 asChild
                 size="lg"
-                className="btn-glow rounded-full bg-gradient-to-r from-ocean-600 to-coral-500 text-white font-semibold hover:from-ocean-500 hover:to-coral-400"
+                className="btn-glow rounded-full bg-gradient-to-r from-ocean-700 to-ocean-500 text-white font-semibold hover:from-ocean-600 hover:to-ocean-400"
               >
                 <a href="#contacto">
                   Solicitar diagnóstico
@@ -96,7 +96,7 @@ export default function Hero() {
               </div>
             </div>
             <div className="absolute -top-4 -right-4 w-44 rounded-2xl bg-white border border-paper-200 shadow-lg p-4 hidden md:block">
-              <div className="text-xs uppercase tracking-widest text-coral-600">24 h</div>
+              <div className="text-xs uppercase tracking-widest text-ocean-600">24 h</div>
               <div className="mt-1 text-sm font-semibold text-paper-900 leading-snug">
                 Reporte técnico con fotos y mediciones.
               </div>

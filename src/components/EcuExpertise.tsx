@@ -31,11 +31,11 @@ const capabilities = [
 
 const protocols = [
   { name: 'OBD-II', color: 'from-ocean-500 to-ocean-700' },
-  { name: 'CAN 2.0 / CAN-FD', color: 'from-coral-500 to-coral-700' },
-  { name: 'J1939 / J1708', color: 'from-sun-500 to-sun-700' },
-  { name: 'K-Line / ISO 9141', color: 'from-ocean-400 to-coral-500' },
-  { name: 'UDS (ISO 14229)', color: 'from-coral-400 to-ocean-500' },
-  { name: 'KWP2000', color: 'from-sun-400 to-coral-500' },
+  { name: 'CAN 2.0 / CAN-FD', color: 'from-ocean-600 to-ocean-800' },
+  { name: 'J1939 / J1708', color: 'from-ocean-400 to-ocean-600' },
+  { name: 'K-Line / ISO 9141', color: 'from-ocean-500 to-ocean-700' },
+  { name: 'UDS (ISO 14229)', color: 'from-ocean-600 to-ocean-800' },
+  { name: 'KWP2000', color: 'from-ocean-400 to-ocean-600' },
 ];
 
 const types = [
@@ -54,7 +54,7 @@ export default function EcuExpertise() {
   return (
     <section id="ecu" className="relative py-24 overflow-hidden">
       <div className="absolute inset-0 hex-grid opacity-40" />
-      <div className="absolute -top-40 -right-40 h-[30rem] w-[30rem] rounded-full bg-coral-200/40 blur-3xl" />
+      <div className="absolute -top-40 -right-40 h-[30rem] w-[30rem] rounded-full bg-ocean-100/60 blur-3xl" />
       <div className="absolute -bottom-32 -left-40 h-[30rem] w-[30rem] rounded-full bg-ocean-200/40 blur-3xl" />
 
       <div className="relative container mx-auto px-4 md:px-6 lg:px-8">
@@ -82,7 +82,7 @@ export default function EcuExpertise() {
                 transition={{ duration: 0.5, delay: i * 0.07 }}
                 className="glass-card glass-card-hover rounded-2xl p-6"
               >
-                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-gradient-to-br from-ocean-100 to-coral-100 text-ocean-700 ring-1 ring-paper-200">
+                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-gradient-to-br from-ocean-100 to-ocean-50 text-ocean-700 ring-1 ring-paper-200">
                   {c.icon}
                 </div>
                 <h3 className="text-lg font-semibold text-paper-900">{c.title}</h3>
@@ -137,7 +137,7 @@ export default function EcuExpertise() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mt-10 rounded-3xl border border-ocean-200 bg-gradient-to-r from-ocean-50 via-white to-coral-50 p-6 md:p-8 flex flex-col md:flex-row md:items-center gap-6"
+          className="mt-10 rounded-3xl border border-ocean-200 bg-gradient-to-r from-ocean-50 via-white to-ocean-100 p-6 md:p-8 flex flex-col md:flex-row md:items-center gap-6"
         >
           <Wrench className="h-10 w-10 text-ocean-600 shrink-0" />
           <div className="flex-1">
@@ -150,7 +150,7 @@ export default function EcuExpertise() {
           </div>
           <a
             href="#contacto"
-            className="btn-glow inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-ocean-600 to-coral-500 px-5 py-3 text-sm font-semibold text-white hover:from-ocean-500 hover:to-coral-400 transition-colors"
+            className="btn-glow inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-ocean-700 to-ocean-500 px-5 py-3 text-sm font-semibold text-white hover:from-ocean-600 hover:to-ocean-400 transition-colors"
           >
             Enviar mi ECU
           </a>

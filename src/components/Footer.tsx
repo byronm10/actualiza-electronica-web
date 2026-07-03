@@ -67,7 +67,7 @@ export default function Footer() {
                 href="https://www.instagram.com/actualidadelectronica"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-paper-200 bg-white hover:border-coral-300 hover:bg-coral-50 hover:text-coral-700 transition-colors"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-paper-200 bg-white hover:border-ocean-300 hover:bg-ocean-50 hover:text-ocean-700 transition-colors"
               >
                 <Instagram size={18} />
               </a>

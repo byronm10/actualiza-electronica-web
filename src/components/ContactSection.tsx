@@ -82,7 +82,7 @@ export default function ContactSection() {
     <section id="contacto" className="relative py-24">
       <div className="absolute inset-0 hex-grid opacity-30" />
       <div className="absolute -top-32 right-0 h-[24rem] w-[24rem] rounded-full bg-ocean-200/40 blur-3xl" />
-      <div className="absolute bottom-0 left-0 h-[22rem] w-[22rem] rounded-full bg-coral-200/40 blur-3xl" />
+      <div className="absolute bottom-0 left-0 h-[22rem] w-[22rem] rounded-full bg-ocean-100/50 blur-3xl" />
 
       <div className="relative container mx-auto px-4 md:px-6 lg:px-8">
         <div className="max-w-3xl">
@@ -105,7 +105,7 @@ export default function ContactSection() {
                 rel="noreferrer"
                 className="glass-card glass-card-hover flex items-start gap-4 rounded-xl p-5 group"
               >
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-gradient-to-br from-ocean-100 to-coral-100 text-ocean-700 ring-1 ring-paper-200">
+                <span className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-gradient-to-br from-ocean-100 to-ocean-50 text-ocean-700 ring-1 ring-paper-200">
                   {item.icon}
                 </span>
                 <div className="min-w-0">
@@ -197,7 +197,7 @@ export default function ContactSection() {
                 <Button
                   type="submit"
                   disabled={loading}
-                  className="btn-glow flex-1 rounded-full bg-gradient-to-r from-ocean-600 to-coral-500 text-white font-semibold hover:from-ocean-500 hover:to-coral-400"
+                  className="btn-glow flex-1 rounded-full bg-gradient-to-r from-ocean-700 to-ocean-500 text-white font-semibold hover:from-ocean-600 hover:to-ocean-400"
                 >
                   {loading ? 'Enviando...' : 'Enviar mensaje'}
                   {!loading && <Send className="ml-2 h-4 w-4" />}

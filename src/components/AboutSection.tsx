@@ -93,7 +93,7 @@ export default function AboutSection() {
             transition={{ duration: 0.6 }}
             className="relative aspect-square"
           >
-            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-ocean-200/50 via-coral-100/40 to-sun-100/40 blur-2xl" />
+            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-ocean-200/50 via-ocean-100/40 to-ocean-50/40 blur-2xl" />
             <div className="absolute top-[8%] left-[8%] right-[8%] bottom-[8%] rounded-3xl overflow-hidden border border-paper-200 shadow-2xl z-10 bg-white">
               <img src="/device.jpeg" alt="Reparación de módulos electrónicos" className="object-cover w-full h-full" />
             </div>

@@ -81,7 +81,7 @@ export default function SolutionsSection() {
               className={cn(
                 'group relative flex items-start gap-3 rounded-xl border p-4 text-left transition-all flex-1',
                 active === s.id
-                  ? 'border-ocean-300 bg-gradient-to-br from-ocean-50 to-coral-50 shadow-[0_20px_50px_-25px_hsl(220_72%_52%/0.35)]'
+                  ? 'border-ocean-300 bg-gradient-to-br from-ocean-50 to-ocean-100 shadow-[0_20px_50px_-25px_hsl(220_72%_52%/0.35)]'
                   : 'border-paper-200 bg-white hover:border-ocean-200 hover:bg-paper-50',
               )}
             >

@@ -50,7 +50,7 @@ export default function ProcessSection() {
         </div>
 
         <div className="mt-14 relative">
-          <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-ocean-300/60 via-coral-300/40 to-transparent md:hidden" />
+          <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-ocean-300/60 via-ocean-200/40 to-transparent md:hidden" />
           <div className="hidden md:block absolute top-8 left-0 right-0 h-px bg-gradient-to-r from-transparent via-ocean-300/50 to-transparent" />
 
           <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-6">
@@ -63,7 +63,7 @@ export default function ProcessSection() {
                 transition={{ duration: 0.45, delay: i * 0.08 }}
                 className="relative pl-20 md:pl-0 md:pt-16"
               >
-                <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 top-0 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-ocean-600 to-coral-500 text-white shadow-[0_12px_30px_-10px_hsl(220_72%_52%/0.55)] ring-4 ring-paper-100">
+                <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 top-0 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-ocean-700 to-ocean-500 text-white shadow-[0_12px_30px_-10px_hsl(220_72%_52%/0.55)] ring-4 ring-paper-100">
                   {s.icon}
                 </div>
                 <div className="glass-card rounded-2xl p-5 md:text-center h-full">

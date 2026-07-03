@@ -94,8 +94,8 @@ const services: Service[] = [
 
 const accentBg: Record<string, string> = {
   electric: 'from-ocean-100 to-ocean-50 text-ocean-700',
-  plasma: 'from-coral-100 to-coral-50 text-coral-700',
-  signal: 'from-sun-100 to-sun-50 text-sun-700',
+  plasma: 'from-ocean-200 to-ocean-100 text-ocean-800',
+  signal: 'from-ocean-50 to-white text-ocean-600',
 };
 
 export default function ServicesSection() {

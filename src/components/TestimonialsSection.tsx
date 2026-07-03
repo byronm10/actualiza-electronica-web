@@ -44,9 +44,9 @@ export default function TestimonialsSection() {
               className="glass-card glass-card-hover rounded-2xl p-6 flex flex-col"
             >
               <Quote className="h-8 w-8 text-ocean-400/70" />
-              <div className="mt-2 flex gap-1 text-coral-400">
+              <div className="mt-2 flex gap-1 text-ocean-500">
                 {Array.from({ length: 5 }).map((_, k) => (
-                  <Star key={k} className="h-4 w-4 fill-coral-400" />
+                  <Star key={k} className="h-4 w-4 fill-ocean-500" />
                 ))}
               </div>
               <blockquote className="mt-4 text-paper-700 text-sm leading-relaxed flex-1">
