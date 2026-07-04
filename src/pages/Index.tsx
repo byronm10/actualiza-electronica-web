@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import StatsSection from '@/components/StatsSection';
@@ -13,9 +13,21 @@ import TestimonialsSection from '@/components/TestimonialsSection';
 import FaqSection from '@/components/FaqSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
+import IntroSplash from '@/components/IntroSplash';
 import { MessageCircle } from 'lucide-react';
 
+const SPLASH_KEY = 'ae_intro_seen';
+
 const Index = () => {
+  const [showSplash, setShowSplash] = useState(() => {
+    return !sessionStorage.getItem(SPLASH_KEY);
+  });
+
+  const handleSplashDone = useCallback(() => {
+    sessionStorage.setItem(SPLASH_KEY, '1');
+    setShowSplash(false);
+  }, []);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       entries => {
@@ -49,7 +61,9 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="relative overflow-x-hidden">
+    <>
+      {showSplash && <IntroSplash onDone={handleSplashDone} />}
+      <div className="relative overflow-x-hidden">
       <Navbar />
       <main>
         <Hero />
@@ -78,6 +92,7 @@ const Index = () => {
         <span className="hidden sm:inline text-sm font-semibold">Escríbenos</span>
       </a>
     </div>
+    </>
   );
 };
 
