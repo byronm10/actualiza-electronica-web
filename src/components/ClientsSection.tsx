@@ -35,13 +35,13 @@ export default function ClientsSection() {
           {track.map((l, i) => (
             <div
               key={`${l.src}-${i}`}
-              className="flex h-24 w-40 md:w-48 shrink-0 items-center justify-center rounded-2xl border border-paper-200 bg-white px-6 shadow-sm"
+              className="flex h-24 w-40 md:w-48 shrink-0 items-center justify-center rounded-2xl border border-paper-200 bg-white px-4 shadow-sm"
             >
               <img
                 src={l.src}
                 alt={l.alt}
                 loading="lazy"
-                className="max-h-16 max-w-full object-contain opacity-80 grayscale hover:opacity-100 hover:grayscale-0 transition duration-300"
+                className="max-h-20 max-w-[94%] object-contain opacity-80 grayscale hover:opacity-100 hover:grayscale-0 transition duration-300"
               />
             </div>
           ))}
