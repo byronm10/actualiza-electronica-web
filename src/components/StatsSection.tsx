@@ -11,8 +11,8 @@ interface Stat {
 }
 
 const stats: Stat[] = [
-  { icon: <Cpu className="h-5 w-5" />, value: 12000, suffix: '+', label: 'ECUs reparadas', sub: 'Motor, ABS, transmisión, BCM' },
-  { icon: <Truck className="h-5 w-5" />, value: 3500, suffix: '+', label: 'Vehículos intervenidos', sub: 'Buses, camiones y flotas' },
+  { icon: <Cpu className="h-5 w-5" />, value: 1000, suffix: '+', label: 'ECUs reparadas', sub: 'Motor, ABS, transmisión, BCM' },
+  { icon: <Truck className="h-5 w-5" />, value: 350, suffix: '+', label: 'Vehículos intervenidos', sub: 'Buses, camiones y flotas' },
   { icon: <Users className="h-5 w-5" />, value: 40, suffix: '+', label: 'Empresas de transporte', sub: 'En toda Colombia' },
   { icon: <Award className="h-5 w-5" />, value: 20, suffix: '+', label: 'Años de experiencia', sub: 'Ingeniería electrónica' },
 ];
