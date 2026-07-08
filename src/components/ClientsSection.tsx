@@ -5,12 +5,12 @@ const logos = [
   { src: '/tropivanes.jpg', alt: 'Tropivanes' },
   { src: '/unitransco.png', alt: 'Unitransco' },
   { src: '/byac.jpg', alt: 'Byac' },
-  { name: 'Rápido Ochoa' },
-  { name: 'Sobusa' },
-  { name: 'Coolitoral' },
-  { name: 'Inserbar' },
-  { name: 'Transurbar' },
-  { name: 'Transportes Transmecar' },
+  { src: '/rapido-ochoa.png', alt: 'Rápido Ochoa' },
+  { src: '/sobusa.jpg', alt: 'Sobusa' },
+  { src: '/coolitoral.png', alt: 'Coolitoral' },
+  { src: '/inserbar.png', alt: 'Inserbar' },
+  { src: '/transurbar.png', alt: 'Transurbar' },
+  { src: '/transmecar.jpg', alt: 'Transportes Transmecar' },
 ];
 
 export default function ClientsSection() {
@@ -34,21 +34,15 @@ export default function ClientsSection() {
         <div className="flex w-max animate-marquee gap-10 py-4">
           {track.map((l, i) => (
             <div
-              key={`${l.src ?? l.name}-${i}`}
+              key={`${l.src}-${i}`}
               className="flex h-24 w-40 md:w-48 shrink-0 items-center justify-center rounded-2xl border border-paper-200 bg-white px-6 shadow-sm"
             >
-              {'src' in l ? (
-                <img
-                  src={l.src}
-                  alt={l.alt}
-                  loading="lazy"
-                  className="max-h-14 max-w-full object-contain opacity-80 grayscale hover:opacity-100 hover:grayscale-0 transition duration-300"
-                />
-              ) : (
-                <span className="text-center font-display text-lg font-bold leading-none text-ocean-800">
-                  {l.name}
-                </span>
-              )}
+              <img
+                src={l.src}
+                alt={l.alt}
+                loading="lazy"
+                className="max-h-16 max-w-full object-contain opacity-80 grayscale hover:opacity-100 hover:grayscale-0 transition duration-300"
+              />
             </div>
           ))}
         </div>
